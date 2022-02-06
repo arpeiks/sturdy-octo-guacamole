@@ -1,0 +1,110 @@
+<!-- Accessing field value by document object -->
+
+<script type="text/javascript">  
+    function printvalue() {  
+    var name=document.form1.name.value;  
+    alert("Welcome: "+name);  
+    }  
+</script> 
+    
+<form name="form1">  
+    Enter Name:<input type="text" name="name"/>  
+    <input type="button" onclick="printvalue()" value="print name"/>  
+</form> 
+
+
+<!--getElementById-->
+
+
+<script type="text/javascript">
+        function getcube () {
+            var x = document.getElementById("x").value;
+            alert(x*x*x); 
+        }
+</script>
+<form>
+    Enter the value of x: <input type="text" id="x" name="x"/><br/> 
+    <input type="button" value="cube" onclick="getcube()" />
+</form>
+
+
+<!-- getElementByName -->
+
+<script type="text/javascript">
+         function classroom() {
+            var writingMaterials = document.getElementsByName("writingMaterials");
+            alert("No of writing materials: "+writingMaterials.length);
+        }   
+</script>
+
+<form>
+        Pen: <input type="radio"  name="writingMaterials" value="Pen"/> 
+        Pencil: <input type="radio" name="writingMaterials" value="Pencil"/> 
+        Ink: <input type="radio"  name="writingMaterials" value="Ink"/>
+        Charcoal: <input type="radio"  name="writingMaterials" value="Charcoal"/>
+
+    <input type="button" value="Number of listed writing materials" onclick="classroom()" />
+</form>
+
+<!-- or -->
+
+<script type="text/javascript">  
+            function totalelements()  {  
+            var allgenders=document.getElementsByName("gender");  
+            alert("Total Genders:"+allgenders.length);  
+    }  
+</script> 
+
+<form>  
+            Male:<input type="radio" name="gender" value="male">  
+            Female:<input type="radio" name="gender" value="female">  
+      
+        <input type="button" onclick="totalelements()" value="Total Genders">  
+</form> 
+
+
+<!-- getElementByTagName -->
+
+<script type="text/javascript">
+            function nametag () {
+              var chain = document.getElementsByTagName("x");   
+              alert("total chain tags are:")+ chain.length;   
+            }
+</script>
+
+<form>
+        <li>Cassy</li>
+        <li>Poker</li>
+        <li>Ricky</li>
+        <li>Boerboel</li>
+    <input type="button" onclick="nametag()" value="Chain tags">
+</form>
+
+<!-- or -->
+
+<script type="text/javascript">  
+    function countpara(){  
+    var totalpara=document.getElementsByTagName("p");  
+    alert("total p tags are: "+totalpara.length);  
+      
+    }  
+    </script>  
+    <p>This is a pragraph</p>  
+    <p>Here we are going to count total number of paragraphs by getElementByTagName() method.</p>  
+    <p>Let's see the simple example</p>  
+    <button onclick="countpara()">count paragraph</button>  
+
+
+
+<!-- Add comment box or suggestion box-->
+
+<script type="text/javascript" >  
+    function showcommentform() {  
+    var data="Name:<input type='text' name='name'><br>Comment:<br><textarea rows='5' cols='80'></textarea><br><input type='submit' value='Post Comment'>";  
+    document.getElementById('mylocation').innerHTML=data;  
+    }  
+    </script>  
+    <form name="myForm">  
+    <input type="button" value="comment" onclick="showcommentform()">  
+    <div id="mylocation"></div>  
+    </form>
