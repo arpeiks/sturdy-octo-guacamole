@@ -27,7 +27,7 @@ fs.writeFile('./docs/blog2.txt', 'hello eveyone!, welcome to my world', () => {
 });
 
 
-// To create a directory and send an alert to the console
+// To create a directory and send alert to the console
 fs.mkdir('./assets', (err) => {
     if (err) {
         console.log(err);
