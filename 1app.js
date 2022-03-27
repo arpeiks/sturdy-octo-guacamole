@@ -52,7 +52,7 @@ app.use((req, res) => {
     //res.status(404).sendFile('./views/404.html', {root: __dirname});
     
 });
-//NOTE: the 404 page stops all other codes below it, hence, you should put it at the end of the code
+//NOTE: the 404 page stops all other codes below it, hence, you should put it at the end of the code..
 
 
 
